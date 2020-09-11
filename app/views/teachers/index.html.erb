@@ -6,6 +6,11 @@
       <li>
         <%= link_to teacher.name,
             teacher_path(teacher) %>
+        <%= link_to "Delete",
+          teacher_path(teacher),
+          method: :delete,
+          remote: true,
+          class: "text-danger" %>
       </li>
     <% end %>
   </ul>
